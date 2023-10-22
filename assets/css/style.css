@@ -57,3 +57,15 @@ form button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.verde {
+  background-color: rgb(137, 252, 146);
+}
+
+.vermelho {
+  background-color: rgb(231, 130, 130);
+}
+
+.amarelo {
+  background-color: yellow;
+}

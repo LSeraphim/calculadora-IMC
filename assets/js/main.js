@@ -13,28 +13,38 @@ function meuEscopo() {
 
     if (isNaN(pesoValue)) {
         resposta.innerHTML = '<p>Peso inválido!</p>';
+        resposta.classList.add('vermelho')
+
     } else if (isNaN(alturaValue)) {
         resposta.innerHTML = '<p>Altura inválida!</p>';
+        resposta.classList.add('vermelho')
+        
     } else {
         let imc = pesoValue / (alturaValue*alturaValue);
         imc = imc.toFixed(2);
 
         if (imc < 18.5) {
+            resposta.classList.add('verde')
             resposta.innerHTML = `<p>${imc} Abaixo do peso!</p>`;
         }
         if (imc >= 18.5 && imc <= 24.9) {
+            resposta.classList.add('verde')
             resposta.innerHTML = `<p>${imc} Peso normal!</p>`;
         }
         if (imc >= 25 && imc <= 29.9) {
+            resposta.classList.add('verde')
             resposta.innerHTML = `<p>${imc} Sobrepeso!</p>`;
         }
         if (imc >= 30 && imc <= 34.9) {
+            resposta.classList.add('verde')
             resposta.innerHTML = `<p>${imc} Obesidade de grau 1!</p>`;
         }
         if (imc >= 35 && imc <= 39.9) {
+            resposta.classList.add('verde')
             resposta.innerHTML = `<p>${imc} Obesidade de grau 2!</p>`;
         }
         if (imc > 40) {
+            resposta.classList.add('verde')
             resposta.innerHTML = `<p>${imc} Obesidade de grau 3!</p>`;
         }
     }
